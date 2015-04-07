@@ -1,7 +1,18 @@
 @ECHO OFF
 SET SCRIPT_FOLDER=%~dps0
 
+IF /I %1 == clean (
+	GOTO :CLEARVARIABLE
+)
+
 %* > %SCRIPT_FOLDER%\temp\outvar
 SET /p OUTVAR=< "%SCRIPT_FOLDER%\temp\outvar"
 DEL %SCRIPT_FOLDER%\temp\outvar
-echo OUTVAR=%OUTVAR% 
+ECHO OUTVAR=%OUTVAR%
+GOTO :END
+
+:CLEARVARIABLE
+ECHO OUTVAR variable cleaned
+SET OUTVAR=
+
+:END

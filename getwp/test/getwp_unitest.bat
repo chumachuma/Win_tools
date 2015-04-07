@@ -35,4 +35,4 @@
 @PROMPT $P$G 
 REM pause
 REM cd .. REM this works...
-@cd D:\Desktop\Desktop_Temp\Programacio\getwp\test
+@cd D:\Desktop\Desktop_Temp\Programacio\Win_tools\getwp\test
