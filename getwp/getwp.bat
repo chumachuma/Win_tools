@@ -68,18 +68,18 @@ EXIT /B 0
 :HELP
 ECHO Run commands with a given preset parameter shortcut.
 ECHO To display this screen type: getwp /?
-ECHO.
+ECHO/
 ECHO getwp keyword [/a: ] [/b: ] [/c: ]
 ECHO getwp keyword command
-ECHO.
+ECHO/
 ECHO /a     Appends character string at the end of the keyword
 ECHO /b     Adds extra options at the end of the command
 ECHO /c     Specify commands to be run
 ECHO /k     Specify keyword
-ECHO.
+ECHO/
 ECHO /w     Adds keyword to be used in future /w KEY "value". Use # to comment line.
 ECHO /.?    Access this window
-ECHO.
+ECHO/
 FOR /F "tokens=1" %%a IN (%GETWP_TXT%) DO (
 	SET GETWP_COMMENT=%%a
 	SET GETWP_COMMENT=!GETWP_COMMENT:~0,1!
