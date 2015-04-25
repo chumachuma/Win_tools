@@ -1,0 +1,14 @@
+;WIN+T	  	-> Open cmd in current dir
+;CapsLock	-> WASD
+;CapsLock	-> E R F C
+;CapsLock	-> IJKL
+;Ctrl Caps	-> CapsLock
+
+TODO
+	Improve mouse diagonal movements
+
+Version 0.1
+	- Added support to <ctrl>, <shift>, <alt> to mapped arrows
+	- switch Caps with control
+	- Remapped mouse movement are smoother
+		- Additionally two speeds were addeddssddaw
