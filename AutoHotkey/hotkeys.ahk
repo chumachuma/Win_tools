@@ -1,4 +1,4 @@
-;Version 0.1
+;Version 0.2
 ;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 
 #SingleInstance
@@ -9,34 +9,20 @@ MouseStep := 50
 DeltaX := 0
 DeltaY := 0
 
+Hotkey, CapsLock & e, ButtonLeft
+Hotkey, CapsLock & r, ButtonRight
+Hotkey, CapsLock & q, ButtonMiddle
+Hotkey, CapsLock & f, WheelUp
+Hotkey, CapsLock & c, WheelDown
+
 CapsLock & 1:: MouseSpeed = 0.1
 CapsLock & 2:: MouseSpeed = 0.2
 CapsLock & 3:: MouseSpeed = 0.5
 CapsLock & 4:: MouseSpeed = 1.0
 CapsLock & 5:: MouseSpeed = 2.0
+CapsLock & o:: MouseSpeed *= 0.9
+CapsLock & p:: MouseSpeed *= 1.1
 
-CapsLock & e:: Send {LButton}
-CapsLock & r:: Send {RButton}
-CapsLock & f:: Send {WheelUp}
-CapsLock & c:: Send {WheelDown}
-
-; CapsLock & w::
-	; SetMouseDelay, -1
-	; MouseMove, 0, -MouseStep*MouseSpeed, 0, R
-	; Gosub, MOUSE_DIAG
-	; return
-; CapsLock & a::
-	; SetMouseDelay, -1
-	; MouseMove, -MouseStep*MouseSpeed, 0, 0, R
-	; return
-; CapsLock & s::
-	; SetMouseDelay, -1
-	; MouseMove, 0, MouseStep*MouseSpeed, 0, R
-	; return
-; CapsLock & d::
-	; SetMouseDelay, -1
-	; MouseMove, MouseStep*MouseSpeed, 0, 0, R
-	; return
 CapsLock & w::
 	DeltaY := -MouseStep*MouseSpeed
 	Gosub, MOUSE_MOVE
@@ -53,25 +39,6 @@ CapsLock & d::
 	DeltaX := MouseStep*MouseSpeed
 	Gosub, MOUSE_MOVE
 	return
-
-MOUSE_MOVE:
-GetKeyState, wState, w
-GetKeyState, aState, a
-GetKeyState, sState, s
-GetKeyState, dState, d
-if wState=D
-	DeltaY := -MouseStep*MouseSpeed
-if aState=D
-	DeltaX := -MouseStep*MouseSpeed
-if sState=D
-	DeltaY := MouseStep*MouseSpeed
-if dState=D
-	DeltaX := MouseStep*MouseSpeed
-SetMouseDelay, -1
-MouseMove, DeltaX, DeltaY, 0, R
-DeltaX := 0
-DeltaY := 0
-return
 ;----------------------------------------------------------------------
 
 ;ARROWS
@@ -156,4 +123,55 @@ return
 ;GENERAL
 CapsLock::SetCapsLockState, AlwaysOff
 ^CapsLock::CapsLock
-Send {CapsLock}
+;Send {CapsLock}
+
+return ; end auto?
+;~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ButtonLeft:
+	SetMouseDelay, -1  ; Makes movement smoother.
+	MouseClick, left,,, 1, 0, D  ; Hold down the left mouse button.
+	KeyWait, e
+	MouseClick, left,,, 1, 0, U  ; Release the mouse button.
+	return
+
+ButtonRight:
+	SetMouseDelay, -1  ; Makes movement smoother.
+	MouseClick, right,,, 1, 0, D  ; Hold down the right mouse button.
+	KeyWait, r
+	MouseClick, right,,, 1, 0, U  ; Release the mouse button.
+	return
+
+ButtonMiddle:
+	SetMouseDelay, -1  ; Makes movement smoother.
+	MouseClick, middle,,, 1, 0, D  ; Hold down the right mouse button.
+	KeyWait, q
+	MouseClick, middle,,, 1, 0, U  ; Release the mouse button.
+	return
+
+WheelUp:
+	Send {WheelUp}
+	return
+
+WheelDown:
+	Send {WheelDown}
+	return
+	
+MOUSE_MOVE:
+	GetKeyState, wState, w
+	GetKeyState, aState, a
+	GetKeyState, sState, s
+	GetKeyState, dState, d
+	if wState=D
+		DeltaY := -MouseStep*MouseSpeed
+	if aState=D
+		DeltaX := -MouseStep*MouseSpeed
+	if sState=D
+		DeltaY := MouseStep*MouseSpeed
+	if dState=D
+		DeltaX := MouseStep*MouseSpeed
+	SetMouseDelay, -1
+	MouseMove, DeltaX, DeltaY, 0, R
+	DeltaX := 0
+	DeltaY := 0
+	return
