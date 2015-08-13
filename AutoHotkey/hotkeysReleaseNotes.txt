@@ -2,17 +2,21 @@
 ;CapsLock	-> WASD 12345 OP
 ;CapsLock	-> E R F C
 ;CapsLock	-> IJKL
+;CapsLock	-> GH
 ;Ctrl Caps	-> CapsLock
 
 TODO
 	Improve mouse diagonal movements
+	
+Version 0.3
+	- Add home and end mapping (G, H respectively)
 
 Version 0.2
-	- Improved mouse click functions
-	- Added control to increase/reduce mouse movement speed
+	- Improve mouse click functions
+	- Add control to increase/reduce mouse movement speed
 	
 Version 0.1
-	- Added support to <ctrl>, <shift>, <alt> to mapped arrows
-	- switch Caps with control
-	- Remapped mouse movement are smoother
-		- Additionally two speeds were addeddssddaw
+	- Add support to <ctrl>, <shift>, <alt> to mapped arrows
+	- Switch Caps with control
+	- Remap mouse movement are smoother
+		- Additionally two speeds are added

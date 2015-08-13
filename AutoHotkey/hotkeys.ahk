@@ -1,4 +1,4 @@
-;Version 0.2
+;Version 0.3
 ;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 
 #SingleInstance
@@ -97,6 +97,34 @@ CapsLock & l::
 	else
 		Send {Right}
 	return
+	
+; HOME and END
+CapsLock & g::
+	GetKeyState, altState, Alt
+	GetKeyState, shiftState, Shift
+	GetKeyState, controlState, Control
+	if altState=D
+		Send !{Home}
+	else if shiftState=D
+		Send +{Home}
+	else if controlState=D
+		Send ^{Home}
+	else
+		Send {Home}
+	return
+CapsLock & h::
+	GetKeyState, altState, Alt
+	GetKeyState, shiftState, Shift
+	GetKeyState, controlState, Control
+	if altState=D
+		Send !{End}
+	else if shiftState=D
+		Send +{End}
+	else if controlState=D
+		Send ^{End}
+	else
+		Send {End}
+	return	
 ;----------------------------------------------------------------------
 	
 ;TERMINAL
