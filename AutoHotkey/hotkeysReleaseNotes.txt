@@ -7,6 +7,10 @@
 
 TODO
 	Improve mouse diagonal movements
+	(Version 0.4) Caps + Win + L also causes the computer to lock
+	
+Version 0.4
+	- Add Win+Arrow key combination (only works with LWin)
 	
 Version 0.3
 	- Add home and end mapping (G, H respectively)

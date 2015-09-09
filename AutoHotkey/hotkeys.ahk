@@ -1,4 +1,4 @@
-;Version 0.3
+;Version 0.4
 ;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup
 
 #SingleInstance
@@ -52,6 +52,8 @@ CapsLock & i::
 		Send +{Up}
 	else if controlState=D
 		Send ^{Up}
+	else if ( GetKeyState("LWin","P") )
+		Send #{Up}
 	else
 		Send {Up}
 	return
@@ -66,6 +68,8 @@ CapsLock & j::
 		Send +{Left}
 	else if controlState=D
 		Send ^{Left}
+	else if GetKeyState("LWin","P")
+		Send #{Left}
 	else
 		Send {Left}
 	return
@@ -80,6 +84,8 @@ CapsLock & k::
 		Send +{Down}
 	else if controlState=D
 		Send ^{Down}
+	else if GetKeyState("LWin","P")
+		Send #{Down}
 	else
 		Send {Down}
 	return
@@ -94,6 +100,8 @@ CapsLock & l::
 		Send +{Right}
 	else if controlState=D
 		Send ^{Right}
+	else if GetKeyState("LWin","P")
+		Send #{Right}
 	else
 		Send {Right}
 	return
