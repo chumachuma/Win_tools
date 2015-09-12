@@ -5,6 +5,26 @@
 	#define PRINTC_DLL __declspec(dllimport)
 #endif
 
+enum Color
+{
+	BLACK,
+	DARKBLUE,
+	DARKGREEN,
+	DARKAQUA,
+	DARKRED,
+	DARKPURPLE,
+	DARKYELLOW,
+	DARKWHITE,
+	GRAY,
+	BLUE,
+	GREEN,
+	AQUA,
+	RED,
+	PURPLE,
+	YELLOW,
+	WHITE,
+};
+
 extern "C"
 {
 	PRINTC_DLL void printC (char* msg, unsigned char color); // Change the font color mantaining the background color
