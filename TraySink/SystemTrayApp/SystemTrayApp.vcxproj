@@ -47,7 +47,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\printC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\printC;D:\Desktop\Desktop_Temp\Programacio\latex2xml\test\test\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>true</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -115,24 +115,33 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="SystemTrayApp.cpp" />
+    <ClCompile Include="SystemTrayApp.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SystemTrayHandler.cpp" />
     <ClCompile Include="TerminalWindowManager.cpp" />
+    <ClCompile Include="test\TC_ShowWindow.cpp" />
+    <ClCompile Include="test\TC_SystemTray.cpp" />
+    <ClCompile Include="test\TC_WindowManager.cpp" />
+    <ClCompile Include="test\TP_TraySink.cpp" />
     <ClCompile Include="WindowManager.cpp" />
     <ClCompile Include="WindowRegistry.cpp" />
     <ClCompile Include="WindowState.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\tools\ProgramFiles\Path\header\printC.h" />
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h" />
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\PreProMacros.h" />
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\SingletonDestroyer.h" />
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h" />
-    <ClInclude Include="..\..\printC\printC\printC.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="ShowOpenWindows.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemTrayHandler.h" />
     <ClInclude Include="TerminalWindowManager.h" />
+    <ClInclude Include="test\TC_ShowWindow.h" />
+    <ClInclude Include="test\TC_SystemTray.h" />
+    <ClInclude Include="test\TC_WindowManager.h" />
     <ClInclude Include="TrayMessages.h" />
     <ClInclude Include="WindowManager.h" />
   </ItemGroup>

@@ -14,16 +14,16 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Test">
-      <UniqueIdentifier>{a6249419-2c3e-4759-be0c-f10ea7e9077f}</UniqueIdentifier>
+      <UniqueIdentifier>{a1e745c3-715f-4ceb-a640-3e54d6aba8ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="Test\TestFramework">
-      <UniqueIdentifier>{ff806b11-6aab-4171-91c6-396be9a71ba8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Test\Source">
-      <UniqueIdentifier>{b2d03592-1542-417d-a272-fd09c61cdf91}</UniqueIdentifier>
+      <UniqueIdentifier>{2a3c094c-75b1-4cae-9c3d-6138d5801378}</UniqueIdentifier>
     </Filter>
     <Filter Include="Test\Header">
-      <UniqueIdentifier>{cbf09979-7860-4f3f-8488-d8088f0604c9}</UniqueIdentifier>
+      <UniqueIdentifier>{e8679f57-8bfe-4ecb-b3ba-46fa5076efe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test\Source">
+      <UniqueIdentifier>{e65037e8-0004-4115-8416-2b9512aed7bc}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -57,8 +57,23 @@
     <ClCompile Include="..\..\..\latex2xml\test\test\Framework\Logger.cpp">
       <Filter>Test\TestFramework</Filter>
     </ClCompile>
+    <ClCompile Include="test\TC_WindowManager.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TP_TraySink.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_ShowWindow.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_SystemTray.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\tools\ProgramFiles\Path\header\printC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="resource.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -80,9 +95,6 @@
     <ClInclude Include="WindowManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\printC\printC\printC.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h">
       <Filter>Test\TestFramework</Filter>
     </ClInclude>
@@ -94,6 +106,15 @@
     </ClInclude>
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h">
       <Filter>Test\TestFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_WindowManager.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_ShowWindow.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_SystemTray.h">
+      <Filter>Test\Header</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
