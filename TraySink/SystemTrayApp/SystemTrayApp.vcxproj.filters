@@ -57,13 +57,16 @@
     <ClCompile Include="..\..\..\latex2xml\test\test\Framework\Logger.cpp">
       <Filter>Test\TestFramework</Filter>
     </ClCompile>
+    <ClCompile Include="test\TC_ShowWindow.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_TerminalWindowManager.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
     <ClCompile Include="test\TC_WindowManager.cpp">
       <Filter>Test\Source</Filter>
     </ClCompile>
     <ClCompile Include="test\TP_TraySink.cpp">
-      <Filter>Test\Source</Filter>
-    </ClCompile>
-    <ClCompile Include="test\TC_ShowWindow.cpp">
       <Filter>Test\Source</Filter>
     </ClCompile>
     <ClCompile Include="test\TC_SystemTray.cpp">
@@ -95,6 +98,9 @@
     <ClInclude Include="WindowManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h">
+      <Filter>Test\TestFramework</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h">
       <Filter>Test\TestFramework</Filter>
     </ClInclude>
@@ -104,9 +110,6 @@
     <ClInclude Include="..\..\..\latex2xml\test\test\Framework\SingletonDestroyer.h">
       <Filter>Test\TestFramework</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h">
-      <Filter>Test\TestFramework</Filter>
-    </ClInclude>
     <ClInclude Include="test\TC_WindowManager.h">
       <Filter>Test\Header</Filter>
     </ClInclude>
@@ -114,6 +117,9 @@
       <Filter>Test\Header</Filter>
     </ClInclude>
     <ClInclude Include="test\TC_SystemTray.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_TerminalWindowManager.h">
       <Filter>Test\Header</Filter>
     </ClInclude>
   </ItemGroup>

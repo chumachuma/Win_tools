@@ -18,7 +18,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -67,7 +67,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\tools\ProgramFiles\Path\header;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\printC;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -75,9 +75,9 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>printC.dll;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>printC.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)TraySink.exe</OutputFile>
-      <AdditionalLibraryDirectories>D:\tools\ProgramFiles\Path\dll\x32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -108,7 +108,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\latex2xml\test\test\Framework\Logger.cpp" />
+    <ClCompile Include="..\..\..\latex2xml\test\test\Framework\Logger.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="SelfClassWindow.cpp" />
     <ClCompile Include="ShowOpenWindows.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -120,28 +122,56 @@
     </ClCompile>
     <ClCompile Include="SystemTrayHandler.cpp" />
     <ClCompile Include="TerminalWindowManager.cpp" />
-    <ClCompile Include="test\TC_ShowWindow.cpp" />
-    <ClCompile Include="test\TC_SystemTray.cpp" />
-    <ClCompile Include="test\TC_WindowManager.cpp" />
-    <ClCompile Include="test\TP_TraySink.cpp" />
+    <ClCompile Include="test\TC_ShowWindow.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TC_SystemTray.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TC_TerminalWindowManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TC_WindowManager.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="test\TP_TraySink.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="WindowManager.cpp" />
     <ClCompile Include="WindowRegistry.cpp" />
     <ClCompile Include="WindowState.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\tools\ProgramFiles\Path\header\printC.h" />
-    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h" />
-    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\PreProMacros.h" />
-    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\SingletonDestroyer.h" />
-    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h" />
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\PreProMacros.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\SingletonDestroyer.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="ShowOpenWindows.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="SystemTrayHandler.h" />
     <ClInclude Include="TerminalWindowManager.h" />
-    <ClInclude Include="test\TC_ShowWindow.h" />
-    <ClInclude Include="test\TC_SystemTray.h" />
-    <ClInclude Include="test\TC_WindowManager.h" />
+    <ClInclude Include="test\TC_ShowWindow.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="test\TC_SystemTray.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="test\TC_TerminalWindowManager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="test\TC_WindowManager.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
     <ClInclude Include="TrayMessages.h" />
     <ClInclude Include="WindowManager.h" />
   </ItemGroup>

@@ -16,7 +16,6 @@ using namespace std;
 int _tmain(int argc, char* argv[])
 {	
 	TerminalWindowManager myWinManager;
-	myWinManager.mainLoop(NULL);
 	_beginthread( myWinManager.mainLoop, 0, NULL );
 
 	SelfClassWindow myWinClass;

@@ -25,7 +25,7 @@ class SystemTrayHandler
 public:
 	SystemTrayHandler (HWND hWnd, HWND hiddenhWnd);
 	~SystemTrayHandler ();
-	static void swtich();
+	static void swtich(); //Static So CALLBACK can use it
 protected:
 	static void hide();
 	static void show();
