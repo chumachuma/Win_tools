@@ -23,4 +23,10 @@ stdoutC("can ", 11)
 stdoutC("write ", 12)
 stdoutC("multi ", 13)
 stdoutC("colored ", 14)
-stdoutC("sentences ", 15)
+stdoutC("sentences\n", 15)
+
+stdoutC("with ", 0x2F)
+stdoutC("highlight ", 0x34)
+stdoutC("using mask \n", 0x2F, 240)
+printC("Hello", Color.BLUE, 0x00) # ERROR
+print ("mask should be 0x00 or 0xF0 (change color only),\nor 0x0F (change background only)")

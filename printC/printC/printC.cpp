@@ -3,7 +3,8 @@
 
 #include "stdafx.h"
 
-#include "printC.h"
+#include "printC.h" 
+//TODO mask are not working
 
 void printC (char* msg, unsigned char color)
 {
@@ -23,9 +24,9 @@ void printCH (char* msg, unsigned char color)
 	std::cout << std::endl;
 }
 
-void stdoutC (char* msg, unsigned char color)
+void stdoutC (char* msg, unsigned char color, unsigned char mask)
 {
-	printBase ( msg, color, 0xF0 );
+	printBase ( msg, color, mask );
 }
 
 
