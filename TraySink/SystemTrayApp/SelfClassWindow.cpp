@@ -81,7 +81,8 @@ LRESULT CALLBACK WindowProcedure (HWND hWnd, UINT message, WPARAM wParam, LPARAM
 			cout  << "WM_RBUTTONDOWN" << endl;
 			break;
 		case WM_DESTROY:
-			;
+			cout << WM_DESTROY << endl;
+			break;
 		default:
 			break;
 		/*case WM_CONTEXTMENU:

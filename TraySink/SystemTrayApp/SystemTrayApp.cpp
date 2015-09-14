@@ -15,7 +15,8 @@ using namespace std;
 
 int _tmain(int argc, char* argv[])
 {	
-	TerminalWindowManager myWinManager;
+	unsigned short argUS = 16;
+	TerminalWindowManager myWinManager(argUS);
 	_beginthread( myWinManager.mainLoop, 0, NULL );
 
 	SelfClassWindow myWinClass;

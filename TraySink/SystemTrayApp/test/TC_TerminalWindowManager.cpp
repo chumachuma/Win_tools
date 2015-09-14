@@ -29,6 +29,7 @@ void TC_TerminalWindowManager::postprocessing()
 }
 
 /*TEST
+help
 info
 buffer
 add ConsoleWindowClass ConsoleTerminalManager_test 1
@@ -37,5 +38,8 @@ buffer
 show 1
 remove 1
 buffer
+	# Bad Cases
+hide 20
+add ConsoleWindowClass Title with space 2
 quit
 */

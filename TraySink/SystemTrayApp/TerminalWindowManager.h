@@ -9,7 +9,7 @@ typedef void(*StringFunc)(std::istream& stream);
 class TerminalWindowManager
 {
 public:
-	TerminalWindowManager();
+	TerminalWindowManager(unsigned short& _winRegSize);
 	~TerminalWindowManager();
 	static void mainLoop(void *arg); // static and argument required for threading
 	
@@ -17,6 +17,7 @@ protected:
 	static std::string inputCommand;
 	static bool continueMainLooop;
 	static WindowManager wMan;
+	static unsigned short winRegSize;
 
 	static std::map<std::string, StringFunc> string2FuncMap;
 
@@ -27,10 +28,8 @@ protected:
 	static void showWindow (std::istream& stream);
 	static void hideWindow (std::istream& stream);
 	static void displayWindows (std::istream& stream);
-	// TODO add console window?
-	// TODO Colors?
-	// BUGS wrong input (BUFFER OVERFLOW!)
-	// Add help command
+	static void help (std::istream& stream); //TODO not implemented
+	// TODO BUGS wrong input (BUFFER OVERFLOW!)
 };
 
 #endif

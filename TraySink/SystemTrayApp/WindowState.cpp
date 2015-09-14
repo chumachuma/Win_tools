@@ -37,7 +37,7 @@ void WindowState::setWindow (HWND *hWnd, unsigned short position)
 void WindowState::updateTitle()
 {
 	int titleLength = GetWindowTextLength (*hWnd);
-	char* windowTitleAux = new char[titleLength];
+	char* windowTitleAux = new char[titleLength+1]; // TODO this misses last letter!
 	GetWindowText(*hWnd, windowTitleAux, titleLength);
 	windowTitle = windowTitleAux;
 }
