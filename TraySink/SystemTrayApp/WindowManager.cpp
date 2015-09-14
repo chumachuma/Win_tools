@@ -1,5 +1,4 @@
 #include "stdafx.h"
-#include "printC.h"
 
 using namespace std;
 #include "WindowManager.h"

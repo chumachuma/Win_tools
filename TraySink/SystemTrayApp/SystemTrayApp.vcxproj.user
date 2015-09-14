@@ -5,4 +5,9 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerEnvironment>PATH=%PAHT%;D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\Release;C:\Windows\System32;</LocalDebuggerEnvironment>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>$(TargetDir)\TraySink.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerEnvironment>PATH=%PAHT%;D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\Release;</LocalDebuggerEnvironment>
+  </PropertyGroup>
 </Project>

@@ -7,6 +7,9 @@ using namespace std;
 WindowRegistry::WindowRegistry (unsigned short numOfWindows): numOfWindows(numOfWindows)
 {
 	//wReg = new vector<WindowState>;
+	StateColor[HIDDEN] = DARKAQUA;
+	StateColor[VISIBLE] = DARKGREEN;
+	StateColor[NONE] = DARKWHITE;
 	wReg.resize(numOfWindows);
 	for (unsigned short i=0; i<numOfWindows; i++)
 		wReg[i].position = i;
@@ -38,12 +41,12 @@ void WindowRegistry::show(unsigned short position)
 
 void WindowRegistry::getRegistry ()
 {
-	printC( "NUM \t state \t windowClass \t windowTitle", BLUE);
+	printC( "NUM \t state \t windowClass \t windowTitle", DARKYELLOW);
 	for (unsigned short i=0; i<numOfWindows; i++) //Slooooow
 	{
 		char* pCharProcess = new char[wReg[i].getState().length() +1];
-		strcpy (pCharProcess, wReg[i].getState().c_str());
-		printC(pCharProcess, WHITE);
+		strcpy( pCharProcess, wReg[i].getState().c_str() );
+		printC( pCharProcess, StateColor[wReg[i].state] );
 		delete[] pCharProcess;
 	}
 }

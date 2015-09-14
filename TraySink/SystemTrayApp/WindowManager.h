@@ -2,6 +2,8 @@
 #ifndef WINDOW_MANAGER_H
 	#define WINDOW_MANAGER_H
 
+#include "printC.h"
+
 enum State {
 	HIDDEN = 0, 
 	VISIBLE = 1,
@@ -44,6 +46,7 @@ public:
 protected:
 	std::vector<WindowState> wReg;
 	unsigned short numOfWindows;
+	std::map<State, Color> StateColor;
 };
 
 

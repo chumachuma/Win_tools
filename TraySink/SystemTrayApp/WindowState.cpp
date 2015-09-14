@@ -53,9 +53,9 @@ void WindowState::updateClass()
 std::string WindowState::getState()
 {
 	ostringstream str_stream;
-	if (position < 99) // Very hard coded
+	if (position < 100) // Very hard coded
 		str_stream << "0";
-	if (position < 9)
+	if (position < 10)
 		str_stream << "0";
 
 	string sState; //Almost as bad code as before
