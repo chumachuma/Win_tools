@@ -8,16 +8,24 @@
 void printC (char* msg, unsigned char color)
 {
 	printBase ( msg, color, 0xF0 ); //0xF0 mask to get background color
+	std::cout << std::endl;
 }
 
 void highlight (char* msg, unsigned char color)
 {
 	printBase ( msg, color<<4, 0x0F ); //0xF0 mask to get color, displace color to second quartet
+	std::cout << std::endl;
 }
 
 void printCH (char* msg, unsigned char color)
 {
 	printBase ( msg, color, 0x00 ); //0xFF everything is accepted
+	std::cout << std::endl;
+}
+
+void stdoutC (char* msg, unsigned char color)
+{
+	printBase ( msg, color, 0xF0 );
 }
 
 
@@ -37,7 +45,7 @@ void printBase (char* msg, unsigned char color, unsigned char mask)
 void printColor (char* msg, unsigned char color, HANDLE* hConsole)
 {
 	SetConsoleTextAttribute(*hConsole, color);
-	std::cout << msg << std::endl;
+	std::cout << msg;
 }
 
 unsigned char getConsoleDefaultColor (HANDLE* hConsole)

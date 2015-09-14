@@ -30,6 +30,7 @@ extern "C"
 	PRINTC_DLL void printC (char* msg, unsigned char color); // Change the font color mantaining the background color
 	PRINTC_DLL void highlight (char* msg, unsigned char color); // Change the font background mantaining the color
 	PRINTC_DLL void printCH (char* msg, unsigned char color); // Change the font color and background
+	PRINTC_DLL void stdoutC (char* msg, unsigned char color); // PrintC but it does make newline
 }
 
 void printBase (char* msg, unsigned char color, unsigned char mask);
