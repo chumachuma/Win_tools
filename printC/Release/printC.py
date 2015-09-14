@@ -61,3 +61,9 @@ class printCH:
 	printC = printCDLL['printCH']
 
 	__metaclass__ = callMetaClass
+	
+class stdoutC:
+	printCDLL = ctypes.CDLL ("printC.dll")
+	printC = printCDLL['stdoutC']
+
+	__metaclass__ = callMetaClass
