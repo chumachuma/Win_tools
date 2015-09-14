@@ -40,9 +40,9 @@ class callMetaClass (type):
 	def __init__(self, child, bases, attr):
 		self.printC = attr["printC"]
 		
-	def __call__ (self, msg, color=Color.WHITE):
+	def __call__ (self, msg, color=Color.WHITE, *arg):
 		myMsg = msg.encode('UTF-8')
-		self.printC ( myMsg, color )
+		self.printC ( myMsg, color, *arg )
 	
 class printC:
 	printCDLL = ctypes.CDLL ("printC.dll")
