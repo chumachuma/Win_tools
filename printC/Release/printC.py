@@ -40,9 +40,10 @@ class callMetaClass (type):
 	def __init__(self, child, bases, attr):
 		self.printC = attr["printC"]
 		
-	def __call__ (self, msg, color=Color.WHITE, *arg):
+	def __call__ (self, msg, color=Color.WHITE, mask=0xFF):
 		myMsg = msg.encode('UTF-8')
-		self.printC ( myMsg, color, *arg )
+		self.printC ( myMsg, color, mask ) # This does not give error
+										   # Even when the dll does not accept 3 parameters
 	
 class printC:
 	printCDLL = ctypes.CDLL ("printC.dll")
