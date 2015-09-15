@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Test">
+      <UniqueIdentifier>{a1e745c3-715f-4ceb-a640-3e54d6aba8ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test\TestFramework">
+      <UniqueIdentifier>{2a3c094c-75b1-4cae-9c3d-6138d5801378}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test\Header">
+      <UniqueIdentifier>{e8679f57-8bfe-4ecb-b3ba-46fa5076efe9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Test\Source">
+      <UniqueIdentifier>{e65037e8-0004-4115-8416-2b9512aed7bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="SelfClassWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShowOpenWindows.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemTrayApp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemTrayHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TerminalWindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowRegistry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowState.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\latex2xml\test\test\Framework\Logger.cpp">
+      <Filter>Test\TestFramework</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_ShowWindow.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_TerminalWindowManager.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_WindowManager.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TP_TraySink.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="test\TC_SystemTray.cpp">
+      <Filter>Test\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\tools\ProgramFiles\Path\header\printC.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ShowOpenWindows.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemTrayHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TerminalWindowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TrayMessages.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WindowManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\TestEnvironment.h">
+      <Filter>Test\TestFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\Logger.h">
+      <Filter>Test\TestFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\PreProMacros.h">
+      <Filter>Test\TestFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\latex2xml\test\test\Framework\SingletonDestroyer.h">
+      <Filter>Test\TestFramework</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_WindowManager.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_ShowWindow.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_SystemTray.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="test\TC_TerminalWindowManager.h">
+      <Filter>Test\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SysTrayResource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

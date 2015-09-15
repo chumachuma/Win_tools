@@ -1,0 +1,1 @@
+python.exe .\alarm\alarm.py %1 %2
