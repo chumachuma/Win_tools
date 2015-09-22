@@ -33,8 +33,11 @@ void TerminalWindowManager::mainLoop ( void *arg )
 	do
 	{
 		cout << ">> ";
-		cin >> inputCommand;
-		string2FuncMap[inputCommand](cin);
+		string optionString;
+		getline(cin, optionString);
+		istringstream optionsStream( optionString );
+		optionsStream >> inputCommand;
+		string2FuncMap[inputCommand](optionsStream);
 		cin.clear();
 	}
 	while (continueMainLooop);

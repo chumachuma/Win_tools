@@ -36,17 +36,15 @@ void WindowState::setWindow (HWND *hWnd, unsigned short position)
 
 void WindowState::updateTitle()
 {
-	int titleLength = GetWindowTextLength (*hWnd);
-	char* windowTitleAux = new char[titleLength+1]; // TODO this misses last letter!
-	GetWindowText(*hWnd, windowTitleAux, titleLength);
+	char windowTitleAux[80]; //TODO might fail
+	GetWindowText(*hWnd, windowTitleAux, sizeof(windowTitleAux));
 	windowTitle = windowTitleAux;
 }
 
 void WindowState::updateClass()
 {
-	int classnameLength = 32;
-	char* windowClassAux = new char[classnameLength];
-	GetClassName(*hWnd, windowClassAux, classnameLength);
+	char windowClassAux[80];
+	GetClassName(*hWnd, windowClassAux, sizeof(windowClassAux));
 	windowClass = windowClassAux;
 }
 

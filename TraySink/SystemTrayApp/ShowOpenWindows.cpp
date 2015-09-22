@@ -13,9 +13,9 @@ BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam)
 		GetWindowText( hwnd, title, sizeof(title) );
 		if ( title[0] && class_name[0] )
 		{
-			cout << "Class name:   ";
-			printC(class_name, DARKYELLOW);
-			cout << "Window title: ";
+			stdoutC("Class name:   ", DARKYELLOW);
+			printC(class_name, DARKAQUA);
+			stdoutC("Window title: ", DARKYELLOW);
 			printC(title, DARKGREEN);
 			cout << endl;
 		}
