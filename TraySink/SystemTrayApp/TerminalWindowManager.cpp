@@ -10,12 +10,12 @@ string TerminalWindowManager::inputCommand = "";
 bool TerminalWindowManager::continueMainLooop = true;
 std::map<std::string, StringFunc> TerminalWindowManager::string2FuncMap;
 unsigned short TerminalWindowManager::winRegSize = 16; // TODO change this so it can be run with command argument
-WindowManager TerminalWindowManager::wMan(16);
+WindowManager* TerminalWindowManager::wMan = NULL;
 
-TerminalWindowManager::TerminalWindowManager (unsigned short& _winRegSize)
+TerminalWindowManager::TerminalWindowManager (unsigned short _winRegSize)
 {
-	//winRegSize = _winRegSize;
-	//wMan = WindowManager(winRegSize);
+	winRegSize = _winRegSize;
+	wMan = new WindowManager(winRegSize);
 	string2FuncMap["quit"] = &endLoop;
 	string2FuncMap["info"] = &showOpenWindows;
 	string2FuncMap["add"] = &attachWindow;
@@ -28,6 +28,8 @@ TerminalWindowManager::TerminalWindowManager (unsigned short& _winRegSize)
 }
 TerminalWindowManager::~TerminalWindowManager ()
 {
+	delete wMan;
+	wMan = 0;
 }
 
 void TerminalWindowManager::mainLoop ( void *arg )
@@ -74,7 +76,7 @@ void TerminalWindowManager::attachWindow (istream& stream) //Very bad code, shou
 	std::istringstream argS( auxTitle );
 	argS >> position;
 	if (position < winRegSize)
-		wMan.attachWindow ( wClass.c_str(), wTitle.c_str(), position );
+		wMan->attachWindow ( wClass.c_str(), wTitle.c_str(), position );
 	else
 		printC("Specified position out of range", RED);
 }
@@ -84,7 +86,7 @@ void TerminalWindowManager::detachWindow (istream& stream)
 	unsigned short position;
 	stream >> position;
 	if (position < winRegSize)
-		wMan.removeWindow( position );
+		wMan->removeWindow( position );
 	else
 		printC("Specified position out of range", RED);
 }
@@ -95,8 +97,8 @@ void TerminalWindowManager::showWindow (istream& stream)
 	stream >> position;
 	if (position < winRegSize)
 	{
-		wMan.showWindow( position );
-		wMan.focus(position);
+		wMan->showWindow( position );
+		wMan->focus(position);
 	}
 	else
 		printC("Specified position out of range", RED);
@@ -107,26 +109,26 @@ void TerminalWindowManager::hideWindow (istream& stream)
 	unsigned short position;
 	stream >> position;
 	if (position < winRegSize)
-		wMan.hideWindow( position );
+		wMan->hideWindow( position );
 	else
 		printC("Specified position out of range", RED);
 }
 
 void TerminalWindowManager::displayWindows (istream& stream)
 {
-	wMan.displayBuffer();
+	wMan->displayBuffer();
 }
 
 void TerminalWindowManager::pinWindow (istream& stream)
 {
 	unsigned short position;
 	stream >> position; //TODO pin -a and pin -r?
-	wMan.top(position);
+	wMan->top(position);
 }
 
 void TerminalWindowManager::unpinWindow (istream& stream)
 {
 	unsigned short position;
 	stream >> position; //TODO pin -a and pin -r?
-	wMan.untop(position);
+	wMan->untop(position);
 }

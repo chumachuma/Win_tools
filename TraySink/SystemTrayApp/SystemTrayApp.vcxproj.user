@@ -10,6 +10,6 @@
     <LocalDebuggerCommand>$(TargetDir)\TraySink.exe</LocalDebuggerCommand>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerEnvironment>PATH=%PAHT%;D:\Desktop\Desktop_Temp\Programacio\Win_tools\printC\Release;</LocalDebuggerEnvironment>
-    <LocalDebuggerCommandArguments>16</LocalDebuggerCommandArguments>
+    <LocalDebuggerCommandArguments>10</LocalDebuggerCommandArguments>
   </PropertyGroup>
 </Project>

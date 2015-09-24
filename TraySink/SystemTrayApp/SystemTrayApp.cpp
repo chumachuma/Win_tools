@@ -16,6 +16,8 @@ using namespace std;
 int _tmain(int argc, char* argv[])
 {	
 	unsigned short argUS = 16;
+	if (argc > 1)
+		argUS = (unsigned short)atoi(argv[1]);
 	TerminalWindowManager myWinManager(argUS);
 	_beginthread( myWinManager.mainLoop, 0, NULL );
 
