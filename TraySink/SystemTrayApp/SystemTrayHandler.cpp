@@ -56,3 +56,8 @@ void SystemTrayHandler::show ()
 {
 	ShowWindow(hWnd, 1);
 }
+
+void SystemTrayHandler::focus()
+{
+	SetWindowPos(hWnd, HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE); //SWP_NOMOVE | SWP_NOSIZE => ignore 0s
+}

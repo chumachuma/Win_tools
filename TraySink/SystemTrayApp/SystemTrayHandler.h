@@ -29,6 +29,7 @@ public:
 protected:
 	static void hide();
 	static void show();
+	static void focus();
 
 	NOTIFYICONDATA Tray;
 	//Can't make clicks on console

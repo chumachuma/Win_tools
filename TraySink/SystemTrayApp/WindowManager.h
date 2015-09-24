@@ -61,6 +61,9 @@ public:
 	void removeWindow (unsigned short position=0);
 	void hideWindow (unsigned short position=0);
 	void showWindow (unsigned short position=0);
+	void focus (unsigned short position=0);
+	void top (unsigned short position=0);
+	void untop (unsigned short position=0);
 
 protected:
 	std::vector<HWND> hWnd;

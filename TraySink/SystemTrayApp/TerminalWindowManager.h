@@ -28,6 +28,8 @@ protected:
 	static void showWindow (std::istream& stream);
 	static void hideWindow (std::istream& stream);
 	static void displayWindows (std::istream& stream);
+	static void pinWindow (std::istream& stream);
+	static void unpinWindow (std::istream& stream);
 	static void help (std::istream& stream); //TODO not implemented
 	// TODO BUGS wrong input (BUFFER OVERFLOW!)
 };

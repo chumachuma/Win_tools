@@ -42,10 +42,13 @@ buffer
 show 1
 remove 1
 buffer
-	# Bad Cases
-hide 20
+pin 1
+unpin 1
 add ConsoleWindowClass Console with Spaces 2
 buffer
 hide 2
+	
+	# Bad Cases
+hide 20
 quit
 */

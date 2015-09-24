@@ -23,6 +23,8 @@ TerminalWindowManager::TerminalWindowManager (unsigned short& _winRegSize)
 	string2FuncMap["show"] = &showWindow;
 	string2FuncMap["hide"] = &hideWindow;
 	string2FuncMap["buffer"] = &displayWindows;
+	string2FuncMap["pin"] = &pinWindow;
+	string2FuncMap["unpin"] = &unpinWindow;
 }
 TerminalWindowManager::~TerminalWindowManager ()
 {
@@ -92,7 +94,10 @@ void TerminalWindowManager::showWindow (istream& stream)
 	unsigned short position;
 	stream >> position;
 	if (position < winRegSize)
+	{
 		wMan.showWindow( position );
+		wMan.focus(position);
+	}
 	else
 		printC("Specified position out of range", RED);
 }
@@ -110,4 +115,18 @@ void TerminalWindowManager::hideWindow (istream& stream)
 void TerminalWindowManager::displayWindows (istream& stream)
 {
 	wMan.displayBuffer();
+}
+
+void TerminalWindowManager::pinWindow (istream& stream)
+{
+	unsigned short position;
+	stream >> position; //TODO pin -a and pin -r?
+	wMan.top(position);
+}
+
+void TerminalWindowManager::unpinWindow (istream& stream)
+{
+	unsigned short position;
+	stream >> position; //TODO pin -a and pin -r?
+	wMan.untop(position);
 }

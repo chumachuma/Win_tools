@@ -61,3 +61,18 @@ void WindowManager::displayBuffer ()
 {
 	wReg->getRegistry();
 }
+
+void WindowManager::focus (unsigned short position)
+{
+	SetWindowPos(hWnd[position], HWND_TOP, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+}
+
+void WindowManager::top (unsigned short position)
+{
+	SetWindowPos(hWnd[position], HWND_TOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+}
+
+void WindowManager::untop (unsigned short position)
+{
+	SetWindowPos(hWnd[position], HWND_NOTOPMOST, 0, 0, 0, 0, SWP_NOMOVE | SWP_NOSIZE);
+}
