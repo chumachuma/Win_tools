@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Window>
+  <title string="Example GUI"/>
+  <!--iconbitmap bitmap="icon256.icon"/-->
+  <!--geometry newGeometry="200x200"/-->
+  <style.theme_use themename="clam"/>
+  <Frame name="frame0">
+    <Label name="label0" text="label0"/>
+    <Button name="button0" text="button0" command="b1click"/>
+    <Frame name="frame1">
+      <Label name="label1" text="label1">
+        <grid row="0" column="0"/>
+      </Label>
+      <Button name="button1" text="button1" command="b2click">
+        <grid row="0" column="1"/>
+      </Button>
+    </Frame>
+  </Frame>
+
+  <Menu name="menu0">
+    <Menu name="menu1" tearoff="0">
+      <add_command label="Open" command="openFile"/>
+      <add_command label="Save" command="saveFile"/>
+      <add_separator/>
+      <add_command label="Exit" command="window.quit"/>
+    </Menu>
+    <Menu name="menu2" tearoff="0">
+      <add_command label="Cut" command="b1click"/>
+      <add_command label="Copy" command="b1click"/>
+      <add_command label="Paste" command="b1click"/>
+    </Menu>
+    <Menu name="menu3" tearoff="0">
+      <add_command label="About" command="b1click"/>
+    </Menu>
+    <add_cascade label="File" menu="@.menu0.menu1"/>
+    <add_cascade label="Edit" menu="@.menu0.menu2"/>
+    <add_cascade label="Help" menu="@.menu0.menu3"/>
+  </Menu>
+  <config menu="@.menu0"/>
+
+</Window>
